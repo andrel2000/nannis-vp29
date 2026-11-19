@@ -34,12 +34,9 @@ Los pedidos llegan al WhatsApp **+51 963 566 440**. El cliente elige color, nomb
 
 Para cambiar el número, en `index.html` busca `data-whatsapp="51963566440"` y `action="https://wa.me/51963566440"` y escribe el nuevo, con el código de país y sin `+` ni espacios.
 
-## Lo que falta completar (tú decides)
+## Lo que se responde por WhatsApp
 
-- **Precio.** La página dice "Precio a consultar".
-- **Memoria.** La ficha dice 4 GB de RAM (dato de tus capturas). El anuncio también menciona versiones de 4+64, 8+128 y 16+256 GB: dime cuál vendes para poner el almacenamiento.
-- **Envíos, garantía y políticas.** No están porque no tengo esos datos.
-- **Dominio.** Cuando tengas el dominio, se agrega la etiqueta `canonical` (comentada en `index.html`).
+El precio, la versión de memoria, el envío y la garantía no van en la página: se los dices a cada cliente por WhatsApp. La página muestra «Precio a consultar».
 
 ## Carpetas
 
