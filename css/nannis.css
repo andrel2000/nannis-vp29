@@ -306,3 +306,9 @@ html.rv .swap[data-strap="Blanco"] > img[data-for="Negro"], html.rv .swap[data-s
   .pin__dot { animation: none; }
   .swap, .swap > img, .seg__opt { transition: none; }
 }
+
+/* the order's WhatsApp send */
+.order-form__send img { width: 20px; height: 20px; margin-right: 10px; flex: none; }
+.order-form__note { grid-column: 1 / -1; margin: 2px 0 0; font-size: 14px; line-height: 1.5; color: var(--muted); }
+.order-form__note .link { display: inline-flex; align-items: center; min-height: 44px; margin-left: 4px; color: var(--ink); }
+.order-form__note .link[hidden] { display: none; }

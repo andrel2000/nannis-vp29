@@ -26,11 +26,16 @@ Hace falta el servidor (no abrir `index.html` con doble clic) porque el recorrid
 | Sensores (`#sensores`) | La parte de atrás y la luz verde del sensor, batería e IP67 |
 | Correas (`#correas`) | Blanco o negro con transición; la elección pasa al pedido |
 | Ficha (`#ficha`) | Especificaciones del fabricante agrupadas |
-| Pedido (`#pedido`) | Formulario con el color sincronizado y "Precio a consultar" |
+| Pedido (`#pedido`) | Formulario con el color sincronizado y "Precio a consultar": al enviarlo se abre WhatsApp con el pedido escrito |
+
+## Pedidos por WhatsApp
+
+Los pedidos llegan al WhatsApp **+51 963 566 440**. El cliente elige color, nombre, cantidad y ciudad, toca «Pedir el VP29» y se abre su WhatsApp con el mensaje listo para enviar. El enlace «¿Dudas? Escríbenos por WhatsApp» va al mismo número.
+
+Para cambiar el número, en `index.html` busca `data-whatsapp="51963566440"` y `action="https://wa.me/51963566440"` y escribe el nuevo, con el código de país y sin `+` ni espacios.
 
 ## Lo que falta completar (tú decides)
 
-- **A dónde llegan los pedidos.** Hoy el formulario abre un correo a `pedidos@nannis.example`, una dirección de prueba. Cámbiala en `index.html` (busca `mailto:`) o pásame tu WhatsApp o tu servicio de formularios y lo conecto.
 - **Precio.** La página dice "Precio a consultar".
 - **Memoria.** La ficha dice 4 GB de RAM (dato de tus capturas). El anuncio también menciona versiones de 4+64, 8+128 y 16+256 GB: dime cuál vendes para poner el almacenamiento.
 - **Envíos, garantía y políticas.** No están porque no tengo esos datos.

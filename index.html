@@ -373,27 +373,25 @@
         <p class="eyebrow">Pedido</p>
         <h2 id="pedido-h" class="h2">Pedido del VP29</h2>
         <p class="order__price">Precio a consultar <span class="order__year">Modelo 2026</span></p>
-        <p class="lead">Elige el color y deja tus datos: te escribimos con el precio y el envío a tu ciudad.</p>
-        <!-- stand-in: mailto on .example until the store gives its WhatsApp, email or form service (data-endpoint) -->
-        <form class="form order-form" action="mailto:pedidos@nannis.example" method="post" enctype="text/plain" data-endpoint="" data-sent="Tu pedido del VP29 está enviado. Te escribimos con el precio y el envío." novalidate>
+        <p class="lead">Elige el color y completa tus datos: se abre WhatsApp con tu pedido ya escrito y te respondemos con el precio y el envío a tu ciudad.</p>
+        <!-- the order goes to the store's WhatsApp: js/nannis.js writes the message and opens wa.me with data-whatsapp -->
+        <form class="form order-form" action="https://wa.me/51963566440" method="get" target="_blank" data-whatsapp="51963566440" data-fix="Completa los campos marcados para enviar tu pedido." novalidate>
           <fieldset class="field field--full seg seg--form">
             <legend>Color de la correa</legend>
             <div class="seg__opts"><label class="seg__opt"><input type="radio" name="color" value="Blanco" checked><span class="seg__dot" style="--sw: #efede9" aria-hidden="true"></span>Blanco</label>
             <label class="seg__opt"><input type="radio" name="color" value="Negro"><span class="seg__dot" style="--sw: #141414" aria-hidden="true"></span>Negro</label></div>
           </fieldset>
-          <div class="field"><label for="f-cant">Cantidad</label>
-            <input id="f-cant" name="cantidad" type="text" inputmode="numeric" autocomplete="off" value="1" required aria-describedby="f-cant-err">
-            <p class="field__error" id="f-cant-err" hidden>Escribe cuántos relojes quieres, con números.</p></div>
-          <div class="field"><label for="f-ciudad">Ciudad o distrito</label>
-            <input id="f-ciudad" name="ciudad" type="text" autocomplete="address-level2" required aria-describedby="f-ciudad-err">
-            <p class="field__error" id="f-ciudad-err" hidden>Escribe la ciudad o el distrito para el envío.</p></div>
           <div class="field"><label for="f-name">Nombre</label>
             <input id="f-name" name="nombre" type="text" autocomplete="name" required aria-describedby="f-name-err">
             <p class="field__error" id="f-name-err" hidden>Escribe tu nombre para el pedido.</p></div>
-          <div class="field"><label for="f-email">Correo</label>
-            <input id="f-email" name="correo" type="email" autocomplete="email" inputmode="email" required aria-describedby="f-email-err">
-            <p class="field__error" id="f-email-err" hidden>Escribe un correo con @, como nombre@correo.com.</p></div>
-          <div class="btn-row"><button class="btn btn--primary" type="submit">Pedir el VP29</button></div>
+          <div class="field"><label for="f-cant">Cantidad</label>
+            <input id="f-cant" name="cantidad" type="text" inputmode="numeric" pattern="[0-9]{1,3}" autocomplete="off" value="1" required aria-describedby="f-cant-err">
+            <p class="field__error" id="f-cant-err" hidden>Escribe cuántos relojes quieres, con números.</p></div>
+          <div class="field field--full"><label for="f-ciudad">Ciudad o distrito</label>
+            <input id="f-ciudad" name="ciudad" type="text" autocomplete="address-level2" required aria-describedby="f-ciudad-err">
+            <p class="field__error" id="f-ciudad-err" hidden>Escribe la ciudad o el distrito para el envío.</p></div>
+          <div class="btn-row"><button class="btn btn--primary order-form__send" type="submit"><img src="assets/icons/whatsapp.svg" alt="" width="20" height="20" aria-hidden="true">Pedir el VP29</button></div>
+          <p class="order-form__note">Se abre WhatsApp con tu pedido escrito: solo toca Enviar. <a class="link" href="#pedido" data-wa-link="Hola Ñanñis, tengo una consulta sobre el smartwatch VP29.">¿Dudas? Escríbenos por WhatsApp</a></p>
           <p class="form__status" role="status" data-form-status></p>
         </form>
       </div>

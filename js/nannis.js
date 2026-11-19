@@ -93,3 +93,40 @@ if (canObserve) {
 }
 const start = radios.find((r) => r.checked);
 if (start) setStrap(start.value);
+
+/* ---------------------------------------------------------------- the order goes to WhatsApp */
+// The kit (system.js) checks the fields and shows each error under its field; this only steps in once every
+// field is valid: it writes the order as one message and opens the store's chat (wa.me) with it.
+const orderForm = document.querySelector('form.order-form');
+if (orderForm) {
+  orderForm.addEventListener('submit', (e) => {
+    const fields = [...orderForm.elements].filter((el) => el.matches('input, select, textarea') && !/^(hidden|submit|button|reset|image)$/.test(el.type));
+    if (!fields.every((el) => el.checkValidity())) return;          // the kit marks the fields and stops the send
+    const number = (orderForm.dataset.whatsapp || '').replace(/\D/g, '');
+    if (!number) return;
+    e.preventDefault();
+    const data = new FormData(orderForm);
+    const strap = data.get('color') === 'Negro' ? 'negra' : 'blanca';
+    const text = [
+      'Hola Ñanñis, quiero pedir el smartwatch VP29 (modelo 2026).',
+      `Correa: ${strap}`,
+      `Cantidad: ${String(data.get('cantidad') || '1').trim()}`,
+      `Ciudad o distrito: ${String(data.get('ciudad') || '').trim()}`,
+      `Nombre: ${String(data.get('nombre') || '').trim()}`,
+      '¿Me confirman el precio y el envío?',
+    ].join('\n');
+    const url = `https://wa.me/${number}?text=${encodeURIComponent(text)}`;
+    const status = orderForm.querySelector('[data-form-status]');
+    if (status) status.textContent = 'Abriendo WhatsApp con tu pedido. Si no se abre, revisa que tengas WhatsApp instalado.';
+    const win = window.open(url, '_blank');
+    if (win) win.opener = null; else window.location.href = url;
+  });
+}
+
+// "Escribir por WhatsApp" links take the store's number from the order form
+const waNumber = (orderForm?.dataset.whatsapp || '').replace(/\D/g, '');
+document.querySelectorAll('[data-wa-link]').forEach((a) => {
+  if (!waNumber) { a.hidden = true; return; }
+  a.href = `https://wa.me/${waNumber}?text=${encodeURIComponent(a.dataset.waLink || 'Hola Ñanñis, tengo una consulta sobre el VP29.')}`;
+  a.target = '_blank'; a.rel = 'noopener';
+});
