@@ -4,10 +4,7 @@ Página de lanzamiento del smartwatch VP29, hecha con HTML, CSS y JavaScript (si
 
 **Enlace público:** https://andrel2000.github.io/nannis-vp29/ (GitHub Pages, repositorio https://github.com/andrel2000/nannis-vp29).
 
-Para publicar cambios: guarda los archivos y ejecuta en esta carpeta , On branch main
-Your branch is up to date with 'origin/main'.
-
-nothing to commit, working tree clean y . GitHub Pages actualiza el enlace en uno o dos minutos.
+Para publicar cambios: guarda los archivos y ejecuta en esta carpeta `git add -A`, después `git commit -m "tu mensaje"` y al final `git push`. GitHub Pages actualiza el enlace en uno o dos minutos.
 
 ## Verla en tu computadora
 
