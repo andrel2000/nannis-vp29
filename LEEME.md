@@ -2,6 +2,13 @@
 
 Página de lanzamiento del smartwatch VP29, hecha con HTML, CSS y JavaScript (sin instalar nada).
 
+**Enlace público:** https://andrel2000.github.io/nannis-vp29/ (GitHub Pages, repositorio https://github.com/andrel2000/nannis-vp29).
+
+Para publicar cambios: guarda los archivos y ejecuta en esta carpeta , On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean y . GitHub Pages actualiza el enlace en uno o dos minutos.
+
 ## Verla en tu computadora
 
 1. Abre una terminal en esta carpeta.
@@ -40,4 +47,4 @@ Hace falta el servidor (no abrir `index.html` con doble clic) porque el recorrid
 - `assets/` — el kit de diseño y la escena `assets/scenes/film-scrub/`, que mueve tu video con el scroll.
 - `servidor-local.mjs` — servidor para verla en tu computadora.
 
-Para publicarla, sube toda la carpeta a tu hosting (Netlify, Vercel, GitHub Pages, Hostinger, etc.). No necesitas `servidor-local.mjs` ni `.taste-skill/` en el hosting.
+El archivo `.gitignore` decide qué se sube: solo lo que la página usa (no se suben las pruebas, capturas ni las fotos de la versión anterior).
