@@ -1,0 +1,36 @@
+{
+  "id": "film-scrub",
+  "name": "Film scrub",
+  "family": "object-scrub",
+  "look": "The client's own product film held on one screen and scrubbed by the scroll: the chapter in hand opens its title and two lines at the left, the film's frame for the scroll position fills the right, and the chapter's word sits large and faint behind it. A meter at the foot shows the film's time.",
+  "fits": [
+    "statement"
+  ],
+  "types": [
+    "tech"
+  ],
+  "trigger": "scroll",
+  "hold": 5,
+  "restH": 1,
+  "cost": "mid",
+  "webgl": 0,
+  "reduced": "The chapters as a list beside the film itself, a video with its poster and controls.",
+  "phone": "A light version: smaller frames, the film above the chapter, the same hold.",
+  "maxPerPage": 1,
+  "weight": 0,
+  "needs": {
+    "film": "the client's own product film as a frame sequence (WebP), a desktop and a phone size",
+    "words": "a title and 3 to 6 chapters of a heading and one or two lines"
+  },
+  "never": "a stand-in film; copy over the film; a second moving ground behind it",
+  "avoidWith": [
+    "fixed-hero-object",
+    "object-through-giant-type"
+  ],
+  "avoidMoments": [],
+  "states": {
+    "start": { "p": 0.02, "wait": 900 },
+    "middle": { "p": 0.5, "wait": 900 },
+    "end": { "p": 0.98, "wait": 900 }
+  }
+}

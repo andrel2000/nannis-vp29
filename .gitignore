@@ -1,0 +1,44 @@
+# Only what the public page needs goes to GitHub: everything is ignored, then the page's own files come back.
+/*
+!/.gitignore
+!/.nojekyll
+!/index.html
+!/share.jpg
+!/LEEME.md
+!/css/
+!/js/
+
+# photos, logo, the 3D frames and the original film (the previous version's media stays out)
+!/media/
+/media/*
+!/media/v2/
+!/media/logo/
+!/media/film/
+/media/film/*
+!/media/film/vp29-3d.mp4
+
+# the design kit: only the files the page loads
+!/assets/
+/assets/*
+!/assets/system.css
+!/assets/system.js
+!/assets/motion/
+/assets/motion/*
+!/assets/motion/motion.css
+!/assets/motion/motion.js
+!/assets/icons/
+/assets/icons/*
+!/assets/icons/icon.css
+!/assets/icons/whatsapp.svg
+!/assets/icons/openai.svg
+!/assets/icons/claude.svg
+!/assets/icons/deepseek.svg
+!/assets/icons/google-drive.svg
+!/assets/icons/google-play.svg
+!/assets/scenes/
+/assets/scenes/*
+!/assets/scenes/scenes.css
+!/assets/scenes/scenes.js
+!/assets/scenes/lib.js
+!/assets/scenes/film-scrub/
+/assets/scenes/film-scrub/demo.html
